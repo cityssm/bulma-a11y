@@ -2,7 +2,7 @@
   "name": "@cityssm/bulma-a11y",
   "version": "0.1.0",
   "description": "Bulma with increased colour contrast to meet accessibility requirements.",
-  "main": "index.js",
+  "main": "bulma-a11y.min.css",
   "scripts": {
     "test": "mocha --timeout 10000"
   },

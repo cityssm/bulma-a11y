@@ -1,16 +1,15 @@
-$danger: #CC3D59;
+$danger: #cc3d59 !default;
 
-$info: #2879AF;
-$info-dark: #164463;
+$info: #2879af !default;
+$info-dark: #164463 !default;
 
-$primary: #007A63;
-$primary-dark: #004235;
+$primary: #007a63 !default;
+$primary-dark: #004235 !default;
 
-$success: #267741;
-$success-dark: #1E5E32;
+$success: #267741 !default;
+$success-dark: #1e5e32 !default;
 
-$warning: #EAC952;
+$warning: #eac952 !default;
 
-// $warning-dark: #846700;
 
 @import 'node_modules/bulma/bulma';
