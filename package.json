@@ -1,0 +1,34 @@
+{
+  "name": "@cityssm/bulma-a11y",
+  "version": "0.1.0",
+  "description": "Bulma with increased colour contrast to meet accessibility requirements.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 10000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cityssm/bulma-a11y.git"
+  },
+  "keywords": [
+    "bulma",
+    "accessibility"
+  ],
+  "author": "The Corporation of the City of Sault Ste. Marie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cityssm/bulma-a11y/issues"
+  },
+  "homepage": "https://github.com/cityssm/bulma-a11y#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.9",
+    "@types/mocha": "^8.2.0",
+    "@types/puppeteer": "^5.4.2",
+    "bulma": "^0.9.1",
+    "express": "^4.17.1",
+    "get-port": "^5.1.1",
+    "lighthouse": "^7.0.0",
+    "mocha": "^8.2.1",
+    "puppeteer": "^5.5.0"
+  }
+}

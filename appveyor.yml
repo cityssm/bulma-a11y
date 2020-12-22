@@ -1,0 +1,18 @@
+image: ubuntu
+platform: Any CPU
+
+stack: "node 14"
+
+install:
+  # Output useful info for debugging.
+  - node --version
+  - npm --version
+  # install modules
+  - sh: npm ci
+  - sh: npm install -g mocha
+
+test_script:
+  - mocha --timeout 10000
+
+# Don't actually build.
+build: off

@@ -1,2 +1,3 @@
 # bulma-a11y
-Bulma with increased colour contrast to meet accessibility requirements.
+
+The [Bulma CSS framework](https://bulma.io/) with increased colour contrast to meet accessibility requirements.

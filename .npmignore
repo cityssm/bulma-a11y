@@ -1,0 +1,11 @@
+.git
+.github
+node_modules
+test
+
+.atomignore
+.eslintrc.js
+.gitignore
+.npmignore
+appveyor.yml
+tsconfig.json
