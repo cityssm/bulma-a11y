@@ -16,6 +16,7 @@ const http = require("http");
 const app = require("./server/app");
 const getPort = require("get-port");
 const lhReportGenerator = require("lighthouse/lighthouse-core/report/report-generator");
+;
 describe("bulma-a11y", () => {
     let httpServer;
     let portNumber;
@@ -26,17 +27,17 @@ describe("bulma-a11y", () => {
         httpServer.listen(portNumber);
         browser = yield puppeteer.launch();
     }));
-    after(() => {
+    after(() => __awaiter(void 0, void 0, void 0, function* () {
         try {
-            browser.close();
+            yield browser.close();
             httpServer.close();
         }
         catch (_e) {
             console.log(_e);
         }
-    });
+    }));
     it("should load stylesheet", () => __awaiter(void 0, void 0, void 0, function* () {
-        const url = "http://localhost:" + portNumber + "/bulma-a11y/bulma-a11y.min.css";
+        const url = "http://localhost:" + portNumber.toString() + "/bulma-a11y/bulma-a11y.min.css";
         const page = yield browser.newPage();
         yield page.goto(url)
             .then((res) => {
@@ -50,11 +51,11 @@ describe("bulma-a11y", () => {
     for (const testPage of testPages) {
         it("should score a 100% accessibility score - " + testPage, () => __awaiter(void 0, void 0, void 0, function* () {
             var _a;
-            const url = "http://localhost:" + portNumber + "/" + testPage + ".html";
+            const url = "http://localhost:" + portNumber.toString() + "/" + testPage + ".html";
             const report = yield lighthouse(url, {
-                port: (new URL(browser.wsEndpoint())).port,
-                output: "json",
-                onlyCategories: ["accessibility"]
+                "port": (new URL(browser.wsEndpoint())).port,
+                "output": "json",
+                "onlyCategories": ["accessibility"]
             });
             const reportJSON = JSON.parse(lhReportGenerator.generateReport(report.lhr, "json"));
             const score = reportJSON.categories.accessibility.score;

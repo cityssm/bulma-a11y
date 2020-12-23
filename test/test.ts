@@ -8,8 +8,14 @@ import * as app from "./server/app";
 
 import * as getPort from "get-port";
 
-import lhReportGenerator = require('lighthouse/lighthouse-core/report/report-generator');
+import lhReportGenerator = require("lighthouse/lighthouse-core/report/report-generator");
 
+
+interface DetailItem {
+  node: {
+    selector: string;
+  };
+}
 
 interface AuditProperties {
   title: string;
@@ -17,13 +23,9 @@ interface AuditProperties {
   warnings: string[] | undefined;
   score: number | null;
   details: {
-    items: {
-      node: {
-        selector: string
-      }
-    }[]
-  }
-}
+    items: DetailItem[];
+  };
+};
 
 
 describe("bulma-a11y", () => {
@@ -33,7 +35,7 @@ describe("bulma-a11y", () => {
 
   let browser: puppeteer.Browser;
 
-  before(async () => {
+  before(async() => {
     portNumber = await getPort();
 
     httpServer = http.createServer(app);
@@ -42,9 +44,9 @@ describe("bulma-a11y", () => {
     browser = await puppeteer.launch();
   });
 
-  after(() => {
+  after(async() => {
     try {
-      browser.close();
+      await browser.close();
       httpServer.close();
 
     } catch (_e) {
@@ -53,9 +55,9 @@ describe("bulma-a11y", () => {
     }
   });
 
-  it("should load stylesheet", async () => {
+  it("should load stylesheet", async() => {
 
-    const url = "http://localhost:" + portNumber + "/bulma-a11y/bulma-a11y.min.css";
+    const url = "http://localhost:" + portNumber.toString() + "/bulma-a11y/bulma-a11y.min.css";
 
     const page = await browser.newPage();
 
@@ -73,21 +75,19 @@ describe("bulma-a11y", () => {
 
   for (const testPage of testPages) {
 
-    it("should score a 100% accessibility score - " + testPage, async () => {
+    it("should score a 100% accessibility score - " + testPage, async() => {
 
-      const url = "http://localhost:" + portNumber + "/" + testPage + ".html";
+      const url = "http://localhost:" + portNumber.toString() + "/" + testPage + ".html";
 
       const report = await lighthouse(url, {
-        port: (new URL(browser.wsEndpoint())).port,
-        output: "json",
-        onlyCategories: ["accessibility"]
+        "port": (new URL(browser.wsEndpoint())).port,
+        "output": "json",
+        "onlyCategories": ["accessibility"]
       });
 
       const reportJSON = JSON.parse(lhReportGenerator.generateReport(report.lhr, "json"));
 
       const score = reportJSON.categories.accessibility.score;
-
-
 
       if (score < 1) {
         const audits: AuditProperties[] = Object.values(reportJSON.audits);
@@ -98,7 +98,7 @@ describe("bulma-a11y", () => {
             console.log(audit.title);
             console.log(audit.description);
             for (const item of audit.details.items) {
-              console.log("- " + item.node ?.selector);
+              console.log("- " + item.node?.selector);
             }
             console.log("\n");
           }
