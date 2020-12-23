@@ -12,7 +12,7 @@ install:
   - sh: npm install -g mocha
 
 test_script:
-  - mocha --timeout 10000
+  - mocha --timeout 15000
 
 # Don't actually build.
 build: off
