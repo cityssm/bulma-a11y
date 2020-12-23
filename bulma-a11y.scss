@@ -1,14 +1,21 @@
-$danger: #cc3d59 !default;
+@import 'bulma/sass/utilities/initial-variables';
 
-$info: #2879af !default;
-$info-dark: #164463 !default;
+$bulma-a11y-base-darken-pct: 15%;
+$bulma-a11y-dark-pct: 10%;
 
-$primary: #007a63 !default;
-$primary-dark: #004235 !default;
+$danger: darken($red, $bulma-a11y-base-darken-pct) !default;
+$danger-dark: darken($danger, $bulma-a11y-dark-pct) !default;
 
-$success: #267741 !default;
-$success-dark: #1e5e32 !default;
+$info: darken($cyan, $bulma-a11y-base-darken-pct) !default;
+$info-dark: darken($info, $bulma-a11y-dark-pct) !default;
 
-$warning: #eac952 !default;
+$primary: darken($turquoise, $bulma-a11y-base-darken-pct) !default;
+$primary-dark: darken($primary, $bulma-a11y-dark-pct) !default;
+
+$success: darken($green, $bulma-a11y-base-darken-pct + 4%) !default;
+$success-dark: darken($success, $bulma-a11y-dark-pct) !default;
+
+$warning: darken($yellow, $bulma-a11y-base-darken-pct) !default;
+$warning-dark: darken($warning, $bulma-a11y-dark-pct + 30%) !default;
 
 @import 'bulma/bulma';
