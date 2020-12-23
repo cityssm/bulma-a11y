@@ -7,5 +7,6 @@ test
 .eslintrc.js
 .gitignore
 .npmignore
+.sass-lint.yml
 appveyor.yml
 tsconfig.json
