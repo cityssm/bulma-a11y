@@ -1,5 +1,6 @@
 .git
 .github
+docs
 node_modules
 test
 

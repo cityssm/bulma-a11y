@@ -5,6 +5,8 @@
 The [Bulma CSS framework](https://bulma.io/)
 with increased colour contrast to meet accessibility requirements.
 
+![Sample Buttons](docs/buttons.png)
+
 ## Usage
 
 Rather than linking to `bulma.min.css` in your webpage,
@@ -13,3 +15,18 @@ link to `bulma-a11y.min.css`.
 ```html
 <link rel="stylesheet" href="path/to/bulma-a11y.min.css" />
 ```
+
+## Test Pages
+
+The following pages have minimal styling.
+They use code samples from the official Bulma website to test for sufficient colour contrast.
+
+- [Buttons](https://cityssm.github.io/bulma-a11y/test/server/html/buttons.html)
+- [Messages](https://cityssm.github.io/bulma-a11y/test/server/html/messages.html)
+- [Notifications](https://cityssm.github.io/bulma-a11y/test/server/html/notifications.html)
+- [Tags](https://cityssm.github.io/bulma-a11y/test/server/html/tags.html)
+
+## Important Note
+
+While bulma-a11y attempts to improve colour contrast of the main Bulma components,
+using bulma-a11y does not guarantee your website will be considered accessible.
