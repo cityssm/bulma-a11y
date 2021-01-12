@@ -7,6 +7,12 @@ with increased colour contrast to meet accessibility requirements.
 
 ![Sample Buttons](docs/buttons.png)
 
+## Installation
+
+```sh
+npm install @cityssm/bulma-a11y
+```
+
 ## Usage
 
 Rather than linking to `bulma.min.css` in your webpage,
