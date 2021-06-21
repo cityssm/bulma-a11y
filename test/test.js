@@ -1,13 +1,4 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 const assert = require("assert");
 const puppeteer = require("puppeteer");
@@ -21,38 +12,38 @@ describe("bulma-a11y", () => {
     let httpServer;
     let portNumber;
     let browser;
-    before(() => __awaiter(void 0, void 0, void 0, function* () {
-        portNumber = yield getPort();
+    before(async () => {
+        portNumber = await getPort();
         httpServer = http.createServer(app);
         httpServer.listen(portNumber);
-        browser = yield puppeteer.launch();
-    }));
-    after(() => __awaiter(void 0, void 0, void 0, function* () {
+        browser = await puppeteer.launch();
+    });
+    after(async () => {
         try {
-            yield browser.close();
+            await browser.close();
             httpServer.close();
         }
         catch (_e) {
             console.log(_e);
         }
-    }));
-    it("should load stylesheet", () => __awaiter(void 0, void 0, void 0, function* () {
+    });
+    it("should load stylesheet", async () => {
         const url = "http://localhost:" + portNumber.toString() + "/bulma-a11y/bulma-a11y.min.css";
-        const page = yield browser.newPage();
-        yield page.goto(url)
+        const page = await browser.newPage();
+        await page.goto(url)
             .then((res) => {
             assert.strictEqual(res.status(), 200);
         })
             .catch(() => {
             assert.fail();
         });
-    }));
+    });
     const testPages = ["buttons", "notifications", "tags", "messages"];
     for (const testPage of testPages) {
-        it("should score a 100% accessibility score - " + testPage, () => __awaiter(void 0, void 0, void 0, function* () {
+        it("should score a 100% accessibility score - " + testPage, async () => {
             var _a;
             const url = "http://localhost:" + portNumber.toString() + "/" + testPage + ".html";
-            const report = yield lighthouse(url, {
+            const report = await lighthouse(url, {
                 "port": (new URL(browser.wsEndpoint())).port,
                 "output": "json",
                 "onlyCategories": ["accessibility"]
@@ -73,6 +64,6 @@ describe("bulma-a11y", () => {
                 }
             }
             assert.strictEqual(score, 1);
-        }));
+        });
     }
 });
