@@ -1,6 +1,6 @@
 {
   "name": "@cityssm/bulma-a11y",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Bulma with increased colour contrast to meet accessibility requirements.",
   "main": "bulma-a11y.min.css",
   "scripts": {
