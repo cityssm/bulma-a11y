@@ -19,3 +19,48 @@ $warning: darken($yellow, $bulma-a11y-base-darken-pct) !default;
 $warning-dark: darken($warning, $bulma-a11y-dark-pct + 30%) !default;
 
 @import 'bulma/bulma';
+
+a:focus,
+button:focus {
+  outline-color: $black;
+  outline-offset: 4px;
+  outline-style: dotted !important;
+  outline-width: 2px !important;
+
+  .has-background-black &,
+  .has-background-dark & {
+    outline-color: $white;
+  }
+
+  &.is-black {
+    outline-color: $black;
+  }
+
+  &.is-danger {
+    outline-color: $danger-dark;
+  }
+  
+  &.is-dark {
+    outline-color: $dark;
+  }
+
+  &.is-info {
+    outline-color: $info-dark;
+  }
+
+  &.is-link {
+    outline-color: $link-dark;
+  }
+
+  &.is-primary {
+    outline-color: $primary-dark;
+  }
+
+  &.is-success {
+    outline-color: $success-dark;
+  }
+
+  &.is-warning {
+    outline-color: $warning-dark;
+  }
+}
