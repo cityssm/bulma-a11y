@@ -2,13 +2,21 @@
 
 module.exports = {
   "root": true,
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": ["./tsconfig.json"]
   },
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "unicorn"
   ],
-  "extends": "standard-with-typescript",
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:unicorn/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
   "rules": {
     "no-multiple-empty-lines": ["error", {
       "max": 2,
