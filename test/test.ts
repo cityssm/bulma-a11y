@@ -25,7 +25,7 @@ interface AuditProperties {
   details: {
     items: DetailItem[];
   };
-};
+}
 
 
 describe("bulma-a11y", () => {
