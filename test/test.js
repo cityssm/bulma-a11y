@@ -6,7 +6,7 @@ const lighthouse = require("lighthouse");
 const http = require("http");
 const app = require("./server/app");
 const getPort = require("get-port");
-const lhReportGenerator = require("lighthouse/lighthouse-core/report/report-generator");
+const lhReportGenerator = require("lighthouse/report/generator/report-generator");
 describe("bulma-a11y", () => {
     let httpServer;
     let portNumber;

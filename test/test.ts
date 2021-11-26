@@ -8,7 +8,7 @@ import * as app from "./server/app";
 
 import * as getPort from "get-port";
 
-import lhReportGenerator = require("lighthouse/lighthouse-core/report/report-generator");
+import lhReportGenerator = require("lighthouse/report/generator/report-generator");
 
 
 interface DetailItem {
