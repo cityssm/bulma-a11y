@@ -4,7 +4,7 @@
   "description": "Bulma with increased colour contrast to meet accessibility requirements.",
   "main": "bulma-a11y.min.css",
   "scripts": {
-    "test": "mocha --timeout 15000"
+    "test": "mocha --timeout 20000"
   },
   "repository": {
     "type": "git",
