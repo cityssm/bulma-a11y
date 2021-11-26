@@ -20,6 +20,10 @@ $warning-dark: darken($warning, $bulma-a11y-dark-pct + 30%) !default;
 
 @import 'bulma/bulma';
 
+/*
+ * Focus States
+ */
+
 a:focus,
 button:focus {
   outline-color: $black;
@@ -39,7 +43,7 @@ button:focus {
   &.is-danger {
     outline-color: $danger-dark;
   }
-  
+
   &.is-dark {
     outline-color: $dark;
   }
@@ -62,5 +66,28 @@ button:focus {
 
   &.is-warning {
     outline-color: $warning-dark;
+  }
+}
+
+/*
+ * Skip Links
+ */
+
+a.is-sr-only:focus,
+button.is-sr-only:focus {
+  position: fixed !important;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  width: initial !important;
+  height: initial !important;
+  padding: $button-padding-vertical $button-padding-horizontal !important;
+  overflow: initial !important;
+  clip: initial !important;
+  white-space: initial !important;
+
+  &:not(.button) {
+    background-color: $body-background-color;
+    border: initial !important;
   }
 }
