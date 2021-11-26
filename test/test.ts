@@ -71,7 +71,7 @@ describe("bulma-a11y", () => {
   });
 
 
-  const testPages = ["buttons", "notifications", "tags", "messages"];
+  const testPages = ["buttons", "notifications", "tags", "messages", "skipLinks"];
 
   for (const testPage of testPages) {
 

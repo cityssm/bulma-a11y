@@ -37,7 +37,7 @@ describe("bulma-a11y", () => {
             assert.fail();
         });
     });
-    const testPages = ["buttons", "notifications", "tags", "messages"];
+    const testPages = ["buttons", "notifications", "tags", "messages", "skipLinks"];
     for (const testPage of testPages) {
         it("should score a 100% accessibility score - " + testPage, async () => {
             var _a;
