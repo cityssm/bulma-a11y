@@ -10,6 +10,8 @@ with increased colour contrast to meet accessibility requirements.
 
 ![Sample Buttons](docs/buttons.png)
 
+![Sample Skip Link Visible on Focus](docs/skipLinks.png)
+
 ## Installation
 
 ```sh
@@ -34,6 +36,7 @@ They use code samples from the official Bulma website to test for sufficient col
 -   [Messages](https://cityssm.github.io/bulma-a11y/test/server/html/messages.html)
 -   [Notifications](https://cityssm.github.io/bulma-a11y/test/server/html/notifications.html)
 -   [Tags](https://cityssm.github.io/bulma-a11y/test/server/html/tags.html)
+-   [Skip Links](https://cityssm.github.io/bulma-a11y/test/server/html/skipLinks.html)
 
 ## Important Note
 
