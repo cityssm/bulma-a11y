@@ -6,7 +6,8 @@
 [![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/cityssm/bulma-a11y)](https://app.snyk.io/org/cityssm/project/bf65d71f-8d8b-43ba-8262-29a3c92872ef)
 
 The [Bulma CSS framework](https://bulma.io/)
-with increased colour contrast to meet accessibility requirements.
+with increased colour contrast to meet accessibility requirements,
+and some accessible enhancements too. 😊
 
 ![Sample Buttons](docs/buttons.png)
 
@@ -38,7 +39,14 @@ They use code samples from the official Bulma website to test for sufficient col
 -   [Tags](https://cityssm.github.io/bulma-a11y/test/server/html/tags.html)
 -   [Skip Links](https://cityssm.github.io/bulma-a11y/test/server/html/skipLinks.html)
 
-## Important Note
+## ⚠ Important Note
 
 While bulma-a11y attempts to improve colour contrast of the main Bulma components,
-using bulma-a11y does not guarantee your website will be considered accessible.
+using bulma-a11y **does not guarantee** your website will be considered accessible.
+
+## Related Project
+
+Need the JavaScript to make your Bulma dropdowns and tabs work
+while keeping accessibility in mind?
+
+Check out [cityssm/bulma-js](https://github.com/cityssm/bulma-js).
