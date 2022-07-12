@@ -35,6 +35,16 @@ button:focus {
   .has-background-dark & {
     outline-color: $white;
   }
+}
+
+a:focus {
+
+  .has-text-white {
+    outline-color: $white;
+  }
+}
+
+.button:focus {
 
   &.is-black {
     outline-color: $black;
@@ -66,6 +76,11 @@ button:focus {
 
   &.is-warning {
     outline-color: $warning-dark;
+  }
+
+  .has-background-black &.is-inverted,
+  .has-background-dark &.is-inverted {
+    outline-color: $white;
   }
 }
 

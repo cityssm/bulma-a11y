@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../../../../bulma-a11y/bulma-a11y.min.css" />
 </head>
 
-<body class="m-4">
+<body>
   <a class="is-sr-only" href="#main">Skip to Content</a>
   <nav class="navbar is-warning" id="nav" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
@@ -32,7 +32,7 @@
           Documentation
         </a>
 
-        <div class="navbar-item has-dropdown is-hoverable">
+        <div class="navbar-item has-dropdown">
           <a class="navbar-link" href="#">
             More
           </a>
@@ -70,7 +70,7 @@
     </div>
   </nav>
 
-  <main class="mt-4" id="main">
+  <main class="my-6" id="main">
     <div class="container">
       <h1 class="title is-2">
         Main Content
@@ -78,13 +78,22 @@
       <div class="notification is-info is-light">
         <button class="delete" type="button" aria-label="Delete"></button>
         Primar lorem ipsum dolor sit amet, consectetur
-        adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+        adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla.
+        Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a href="#">felis venenatis</a> efficitur. Sit amet,
         consectetur adipiscing elit
       </div>
     </div>
     <a class="button is-link is-sr-only" href="#nav">Jump to Navigation</a>
   </main>
 
+  <footer class="p-4 has-text-right has-background-dark has-text-white">
+    <a class="has-text-white" href="#">Footer Link</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@cityssm/bulma-js@0.3.1/dist/bulma-js.js" integrity="sha256-BG8CXmnArC6j1V5a52hYPiTLbLxYykpd6TQVPrYS1M8=" crossorigin="anonymous"></script>
+  <script>
+    bulmaJS.init();
+  </script>
 </body>
 
 </html>
