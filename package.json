@@ -37,6 +37,6 @@
     "express": "^4.17.1",
     "get-port": "^5.1.1",
     "lighthouse": "^9.1.0",
-    "puppeteer": "^11.0.0"
+    "puppeteer": "^19.5.2"
   }
 }
